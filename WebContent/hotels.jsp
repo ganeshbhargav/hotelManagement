@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="stylesheet" type="text/css" href="layout.css">
-<title>HMS Login</title>
+<title>HMS Book Room</title>
 </head>
 <body>
 
@@ -36,7 +36,7 @@
 						<tr style="height: 23px;"></tr>
 						<tr style="text-align: center;">
 							<td colspan="2"><input type="submit" name="View Room"
-								value="View Room"></td>
+								value="View Room" id="View Room"></td>
 						</tr>
 				<tr>
 				<td style="text-align: right;"><label>Enter Room number :</label></td>
@@ -45,7 +45,7 @@
 						<tr style="height: 23px;"></tr>
 						<tr style="text-align: center;">
 							<td colspan="2"><input type="submit" name="View Room"
-								value="Book"></td>
+								value="Book" id="Book Room"></td>
 						</tr>
 				</table>
 				</form>

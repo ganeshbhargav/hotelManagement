@@ -47,7 +47,7 @@
 						<tr style="height: 23px;"></tr>
 						<tr style="text-align: center;">
 							<td colspan="2"><input type="submit" name="submit"
-								value="Add"></td>
+								value="Add" id = "Add Room"></td>
 						</tr>
 					</table>
 				</form>

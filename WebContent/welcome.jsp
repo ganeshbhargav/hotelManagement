@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="layout.css">
-<title>HMS</title>
+<title>HMS welcome page</title>
 </head>
 <body>
 
@@ -25,21 +25,22 @@
 	<div class="middle_panel">
 		<div id="blur_img"></div>
 		<div class="left_panel">
+		<br> ${successMessage} <br>
 			<table>
 				<tr>
-					<td><a href="hotels.jsp">Book room</a></td>
+					<td><a id="bookRoom" href="hotels.jsp">Book room</a></td>
 				</tr>
 				<tr>
-					<td><a href="cancel.jsp">Cancel room</a></td>				
+					<td><a id="CancelRoom" href="cancel.jsp">Cancel room</a></td>				
 				</tr>
 				<tr>
-					<td><a href="editroom.jsp">Edit room</a></td>				
+					<td><a id="EditRoom" href="editroom.jsp">Edit room</a></td>				
 				</tr>				
 				<tr>
 					<td><a href="#">My booking</a></td>
 				</tr>
 				<tr>
-					<td><a href="addRoom.jsp">Add room</a></td>
+					<td><a id="addRoom" href="addRoom.jsp">Add room</a></td>
 				</tr>
 				<tr>
 					<td><a href="#">Hotel Details</a></td>

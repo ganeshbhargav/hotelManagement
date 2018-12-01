@@ -40,7 +40,7 @@
 						<tr style="height: 23px;"></tr>
 						<tr style="text-align: center;">
 							<td colspan="2"><input type="submit" name="View Room"
-								value="Cancel"></td>
+								value="Cancel" id="Cancel"></td>
 						</tr>
 				</table>
 				</form>

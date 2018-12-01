@@ -55,6 +55,8 @@ public class BookRoom extends HttpServlet {
 			status = roomDao.BookRoom(r);
 			if (status == 1){
 			request.setAttribute("successMessage", "Room booked successfully");	
+			} else {
+			request.setAttribute("successMessage", "Invalid Room Number");	
 			}
 			request.getRequestDispatcher("hotels.jsp").forward(request, response);			
 		}

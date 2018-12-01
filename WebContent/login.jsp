@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="stylesheet" type="text/css" href="layout.css">
-<title>HMS Login</title>
+<title>HMS login page</title>
 </head>
 <body>
 
@@ -45,7 +45,7 @@
 						<tr style="height: 23px;"></tr>
 						<tr style="text-align: center;">
 							<td colspan="2"><input type="submit" name="submit"
-								value="Login"></td>
+								value="Login" id="submit"></td>
 						</tr>
 						<tr style="height: 15px;"></tr>
 						<tr style="text-align: center;">

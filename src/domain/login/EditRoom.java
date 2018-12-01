@@ -14,12 +14,12 @@ import db.DbManager;
 /**
  * Servlet implementation class Login
  */
-@WebServlet("/CancelRoom")
-public class CancelRoom extends HttpServlet {
+@WebServlet("/EditRoom")
+public class EditRoom extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 
-    public CancelRoom() {
+    public EditRoom() {
     	DbManager db = new DbManager();
 		Connection conn = (Connection) db.getConnection();
 		if (conn == null)
@@ -34,6 +34,7 @@ public class CancelRoom extends HttpServlet {
 	//	CustomerDao customerDao = new CustomerDaoImpl();
 		RoomDao roomDao = new RoomDaoImpl();
 		String EnteredRoomNumber = request.getParameter("enteredRoomNumber");
+		String EnteredRoomType = request.getParameter("enteredRoomType");
 		String submitType = request.getParameter("View Room");
 //		Login login = new Login(username, pass);
 //		Customer c = customerDao.validateCustomer(login);
@@ -52,11 +53,13 @@ public class CancelRoom extends HttpServlet {
 			Room r = new Room();
 			int status = 0;
 			r.setRoomNumber(request.getParameter("enteredRoomNumber"));
-			status = roomDao.CancelRoom(r);
+			r.setRoomType(request.getParameter("enteredRoomType"));
+			r.setNumberOfRooms("1");
+			status = roomDao.EditRoom(r);
 			if (status == 1){
-			request.setAttribute("successMessage", "Room cancelled successfully");	
+			request.setAttribute("successMessage", "Room edited successfully");	
 			} else {
-				request.setAttribute("successMessage", "Room does not exist");					
+			request.setAttribute("successMessage", "Invalid Room Number");	
 			}
 			request.getRequestDispatcher("welcome.jsp").forward(request, response);			
 		}

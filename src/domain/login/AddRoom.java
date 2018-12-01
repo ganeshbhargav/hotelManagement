@@ -30,7 +30,7 @@ public class AddRoom extends HttpServlet {
     
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		int status;
 	//	CustomerDao customerDao = new CustomerDaoImpl();
 		RoomDao roomDao = new RoomDaoImpl();
 		String NumberOfRooms = request.getParameter("NumberOfRooms");
@@ -41,8 +41,12 @@ public class AddRoom extends HttpServlet {
 		r.setNumberOfRooms(NumberOfRooms);
 		r.setRoomType(RoomType);
 		r.setRoomNumber(RoomNumber);
-		roomDao.addNewRoom(r);
+		status = roomDao.addNewRoom(r);
+		if (status == 2) {
+			request.setAttribute("successMessage", "Room(s) already exist");			
+		} else {
 		request.setAttribute("successMessage", "Room(s) added successfully");
+		}
 		request.getRequestDispatcher("addRoom.jsp").forward(request, response);
 //		Login login = new Login(username, pass);
 //		Customer c = customerDao.validateCustomer(login);
